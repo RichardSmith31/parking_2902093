@@ -36,7 +36,12 @@
         <value>1</value>
       </counter>
     </diagrams>
-    <fields />
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>2</value>
+      </counter>
+    </fields>
   </counters>
   <alias-groups />
   <management uid="md-dc2421b9ba28473a9cfe50b969e7970d" name="" task-id-sequence="0">
@@ -153,6 +158,9 @@
               <attribute id="a69ecdcc962ce47189fc0c35220753273105" cid="PROP003" name="numeroIdentificacion" creation-date="02/12/2024 15:38:56" property-ref="a83b14080f56484fbf11972074f412b7" />
               <attribute id="a722b91936746401983349f90078f0cd1349" cid="PROP004" name="misCarros" creation-date="02/12/2024 15:39:12" property-ref="d620db73778345f9a1591822ef3fac0a" />
             </attributes>
+            <operations>
+              <operation id="ob1f1a7d44b634351b40a268c1ffa859a816" cid="OP001" name="addCar" creation-date="02/19/2024 14:28:30" type="" type-id="" visibility="public" />
+            </operations>
           </item>
           <item id="0d7b1dc9d14c465bb9a693d319992b82" cid="C003" type="class" name="Cupo" creator="" creation-date="02/12/2024 15:45:22" visibility="undefined">
             <owned-items />

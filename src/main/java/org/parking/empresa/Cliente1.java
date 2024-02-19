@@ -1,5 +1,5 @@
 package org.parking.empresa;
 
-public class Cupo {
+public class Cliente1 {
 
 }
