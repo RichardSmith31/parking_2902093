@@ -8,37 +8,35 @@ public class Cliente {
     public String apellidos;
     public Long numeroIdentificacion;
     public List<Vehiculo> misVehiculos = 
-              new ArrayList<Vehiculo>();
+                new ArrayList<Vehiculo>();
 
-    
     public Cliente() {
     }
 
-    
     public Cliente(String nombres, 
-                   String apellidos, 
+                  String apellidos, 
                    Long numeroIdentificacion) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.numeroIdentificacion = numeroIdentificacion;
     }
-
-
-
+    
     //definir metodo de clase
-    //addCar: vincular un carrito al cliente
+    //addCar: vincular un carrito al cliente 
     public void addVehicle(Vehiculo vehiculo){
+            //añadir el carrito a la lista
+            //this: Accerder a atributos y metodos
+            //Usar al interior de metodos
         this.misVehiculos.add(vehiculo);
-    } 
 
-    //otra sobrecarga del metodo
-    //addvehicle:
-    public void addVehicle(String placa, 
-                           TipoVehiculo tv) {
-            Vehiculo v = new Vehiculo();
-            v.placa = placa;
-            v.tipoVehiculo = tv;
-            this.misVehiculos.add(v);
     }
-
+    //otra sobrecarga del metodo 
+    //addvehicle:
+    public void addVehicle(String placa,
+                            TipoVehiculo tv){
+           Vehiculo v = new Vehiculo();
+           v.placa = placa;
+           v.tipoVehiculo = tv;
+           this.misVehiculos.add(v);
+     }
 }
