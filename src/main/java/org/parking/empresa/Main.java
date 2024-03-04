@@ -24,20 +24,24 @@ public class Main {
         //3. asignacion y new
         //4.Constructor del objeto
         Vehiculo carrito1 = new Vehiculo("ASD 789", TipoVehiculo.PARTICULAR);
-        carrito1.placa = "ASD 789";
-        carrito1.tipoVehiculo = TipoVehiculo.PARTICULAR;
-        System.out.println(carrito1.placa); 
+        carrito1.setPlaca( "ASD 789");
+        carrito1.setTipoVehiculo(TipoVehiculo.PARTICULAR);
+        System.out.println(carrito1.getPlaca()); 
         Vehiculo carrito2 = new Vehiculo();
-        carrito2.placa = "ZXC 345";
-        carrito2.tipoVehiculo = TipoVehiculo.TAXI;
+        carrito2.setPlaca("ZXC 345");
+        carrito2.setTipoVehiculo(TipoVehiculo.TAXI);
+        System.out.println(carrito2.getPlaca());
 
-        System.out.println(carrito2.placa);
+        Vehiculo motico = new Vehiculo();
+        motico.setPlaca("XS 439");
+        motico.setTipoVehiculo(TipoVehiculo.MOTO);
+
 
         //Crear (instanciar) cliente
         Cliente cliente1 = new Cliente("Julian", "Ospina", 10131055L);
-        cliente1.nombres = "Julian";
-        cliente1.apellidos = "Ospina";
-        cliente1.numeroIdentificacion = 10131055L;
+        cliente1.setNombres( "Julian");
+        cliente1.setApellidos( "Ospina");
+        cliente1.setNumeroIdentificacion(10131055L);
 
         //invocar el metodo addCar
         cliente1.addVehicle(carrito1);
@@ -67,10 +71,10 @@ public class Main {
         //hacer registros(pagos) E/S de vehiculos
         //instanciar empleados en el main 
 
-        Empleado empleado1 = new Empleado("Juan", "Valencia", 1);
-        empleado1.nombre = "Juan";
+        Empleado empleado1 = new Empleado("Juan", "Valencia", "1");
+        empleado1.setNombre("Juan");
         empleado1.apellidos = "Valencia";
-        empleado1.codigo = 1;
+        empleado1.codigo = "1";
 
         Pago pago1 = new Pago( 
                             fechaHorainicio, 
@@ -104,15 +108,14 @@ public class Main {
                 //    - fecha y hora fin 
                 //    - cupo (nombre)
                 //    - Mostrar codigo de pago
-                System.out.println( "Pago:|Placa:" + p.vehiculo.placa + "|" );
-                System.out.println("|valor:" + p.valor + "|");
-                System.out.println("|fecha y hora entrada:"  +
-                p.fechaHoraInicio.toString() + "|");
-                System.out.println("|fecha y hora salida:"  +
-                p.fechaHoraFin.toString() + "|");
-                System.out.println("|Cupo:" + p.cupo.nombre + "|" );
-                System.out.println("|Empleado: " + p.empleado.codigo + "|");
-            }
+                System.out.println( "Pago:|Placa:" + p.getVehiculo().getPlaca() + "|" +
+                                    "|valor:" + p.getValor() + "|" +
+                                    "|fecha y hora entrada:"  +
+                                    p.getFechaHoraInicio().toString() + "|" +
+                                    "|fecha y hora salida:"  +
+                                    p.getfechaHoraFin().toString() + "|" +
+                                    "|Cupo:" + p.getCupo().getNombre() + "|" +
+                                    "|Empleado: " + p.geCodigo() + "|");
         }
     }
 

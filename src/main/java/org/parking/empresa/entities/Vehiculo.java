@@ -1,9 +1,11 @@
 package org.parking.empresa.entities;
 
 public class Vehiculo {
-
-    public String placa;
-    public TipoVehiculo tipoVehiculo;
+    //Los atriutos de una clase
+    //para cumplir con encapsulamiento
+    //deben ser private
+    private String placa;
+    private TipoVehiculo tipoVehiculo;
 
     //constructor
     //Sin parametros: constructor por defecto
@@ -17,8 +19,26 @@ public class Vehiculo {
         this.tipoVehiculo = tipoVehiculo;
     }
 
+
     
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public TipoVehiculo getTipoVehiculo() {
+        return tipoVehiculo;
+    }
+
+    public void setTipoVehiculo(TipoVehiculo tipoVehiculo) {
+        this.tipoVehiculo = tipoVehiculo;
+    }
+
     
     
 
+    
 }
